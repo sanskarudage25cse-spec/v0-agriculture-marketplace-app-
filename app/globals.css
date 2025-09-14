@@ -1,0 +1,141 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color scheme for modern agriculture marketplace with orange primary colors */
+  --background: #ffffff; /* White background */
+  --foreground: #4b5563; /* Dark gray text */
+  --card: #fffbeb; /* Light orange card background */
+  --card-foreground: #4b5563; /* Dark gray card text */
+  --popover: #ffffff; /* White popover */
+  --popover-foreground: #4b5563; /* Dark gray popover text */
+  --primary: #ea580c; /* Orange-600 primary */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #f97316; /* Orange-500 secondary */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+  --muted: #fef3c7; /* Light yellow muted */
+  --muted-foreground: #475569; /* Slate-600 muted text */
+  --accent: #f97316; /* Orange-500 accent */
+  --accent-foreground: #ffffff; /* White text on accent */
+  --destructive: #be123c; /* Rose-700 for destructive actions */
+  --destructive-foreground: #ffffff; /* White text on destructive */
+  --border: #d1d5db; /* Gray-300 border */
+  --input: #f9fafb; /* Gray-50 input background */
+  --ring: rgba(234, 88, 12, 0.5); /* Orange ring with transparency */
+  --chart-1: #ea580c; /* Orange-600 chart */
+  --chart-2: #f97316; /* Orange-500 chart */
+  --chart-3: #fffbeb; /* Orange-50 chart */
+  --chart-4: #4b5563; /* Gray-600 chart */
+  --chart-5: #fef3c7; /* Yellow-100 chart */
+  --radius: 0.75rem; /* Increased radius for modern look */
+  --sidebar: #ffffff; /* White sidebar */
+  --sidebar-foreground: #4b5563; /* Dark gray sidebar text */
+  --sidebar-primary: #ea580c; /* Orange sidebar primary */
+  --sidebar-primary-foreground: #ffffff; /* White text on sidebar primary */
+  --sidebar-accent: #f97316; /* Orange sidebar accent */
+  --sidebar-accent-foreground: #ffffff; /* White text on sidebar accent */
+  --sidebar-border: #d1d5db; /* Gray border */
+  --sidebar-ring: rgba(234, 88, 12, 0.5); /* Orange sidebar ring */
+}
+
+.dark {
+  --background: #0f172a; /* Slate-900 dark background */
+  --foreground: #f1f5f9; /* Slate-100 light text */
+  --card: #1e293b; /* Slate-800 dark card */
+  --card-foreground: #f1f5f9; /* Light card text */
+  --popover: #0f172a; /* Dark popover */
+  --popover-foreground: #f1f5f9; /* Light popover text */
+  --primary: #f97316; /* Lighter orange primary for dark mode */
+  --primary-foreground: #0f172a; /* Dark text on primary */
+  --secondary: #334155; /* Slate-700 secondary */
+  --secondary-foreground: #f1f5f9; /* Light text on secondary */
+  --muted: #334155; /* Slate-700 muted */
+  --muted-foreground: #94a3b8; /* Slate-400 muted text */
+  --accent: #334155; /* Slate-700 accent */
+  --accent-foreground: #f1f5f9; /* Light text on accent */
+  --destructive: #f43f5e; /* Rose-500 for dark mode */
+  --destructive-foreground: #f1f5f9; /* Light text on destructive */
+  --border: #334155; /* Slate-700 border */
+  --input: #334155; /* Slate-700 input */
+  --ring: rgba(249, 115, 22, 0.5); /* Orange ring */
+  --chart-1: #f97316; /* Orange chart */
+  --chart-2: #ea580c; /* Darker orange chart */
+  --chart-3: #fed7aa; /* Orange-200 chart */
+  --chart-4: #fb923c; /* Orange-400 chart */
+  --chart-5: #fdba74; /* Orange-300 chart */
+  --sidebar: #1e293b; /* Slate-800 sidebar */
+  --sidebar-foreground: #f1f5f9; /* Light sidebar text */
+  --sidebar-primary: #f97316; /* Orange sidebar primary */
+  --sidebar-primary-foreground: #0f172a; /* Dark text on sidebar primary */
+  --sidebar-accent: #334155; /* Slate-700 sidebar accent */
+  --sidebar-accent-foreground: #f1f5f9; /* Light text on sidebar accent */
+  --sidebar-border: #334155; /* Slate-700 sidebar border */
+  --sidebar-ring: rgba(249, 115, 22, 0.5); /* Orange sidebar ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Added custom gradient backgrounds for enhanced visual appeal */
+  .gradient-bg {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  }
+
+  .card-gradient {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
